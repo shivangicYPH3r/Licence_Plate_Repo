@@ -98,7 +98,9 @@ class DetectionPredictor(BasePredictor):
                 xyxy = [int(x) for x in xyxy]
                 cv2.rectangle(im0, (xyxy[0], xyxy[1]), (xyxy[2], xyxy[3]), color, -1)
                 #new code
-                self.annotator.box_label(xyxy, label, color=colors(c, True))
+                
+                #self.annotator.box_label(xyxy, label, color=colors(c, True))
+                
             if self.args.save_crop:
                 imc = im0.copy()
                 save_one_box(xyxy,
