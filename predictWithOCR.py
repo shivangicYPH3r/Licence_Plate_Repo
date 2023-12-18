@@ -92,6 +92,12 @@ class DetectionPredictor(BasePredictor):
                 ocr = getOCR(im0,xyxy)
                 if ocr != "":
                     label = ocr
+                    [18:04] Karamsetti Sai Ayyappa
+#new code
+                color = colors(c, True)
+                xyxy = [int(x) for x in xyxy]
+                cv2.rectangle(im0, (xyxy[0], xyxy[1]), (xyxy[2], xyxy[3]), color, -1)
+                #new code
                 self.annotator.box_label(xyxy, label, color=colors(c, True))
             if self.args.save_crop:
                 imc = im0.copy()
