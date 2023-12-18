@@ -92,7 +92,7 @@ class DetectionPredictor(BasePredictor):
                 ocr = getOCR(im0,xyxy)
                 if ocr != "":
                     label = ocr
-                    [18:04] Karamsetti Sai Ayyappa
+                    
 #new code
                 color = colors(c, True)
                 xyxy = [int(x) for x in xyxy]
